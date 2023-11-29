@@ -58,7 +58,7 @@ const Aside = () => {
           </div>
         </div>
       ) : (
-        <div className="shadow-2xl relative  h-screen md:hidden bg-secondary overflow-y-hidden w-full rounded-sm  py-7  flex-col">
+        <div className="shadow-2xl h-screen md:hidden bg-secondary overflow-y-hidden w-full rounded-sm  py-7  flex-col">
           <div className="flex justify-end px-5">
             <button className="text-white" onClick={() => toggleMenuHandler()}>
               <RxCross2 className="w-6 h-6" />
