@@ -8,7 +8,7 @@ const SkillsCard = () => {
 
   console.log(color, "color");
   return (
-    <div className="py-8 px-4">
+    <div className=" px-4">
       <h2 className="text-xl font-bold text-white mb-4">Technical Skills</h2>
       <div className="flex flex-wrap justify-around gap-11">
         <div className="mt-3 flex flex-col w-full md:w-1/5 bg-secondary">

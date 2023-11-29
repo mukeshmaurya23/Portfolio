@@ -4,7 +4,7 @@ import Layout from "./Layout";
 
 const MainContainer = () => {
   return (
-    <div className=" bg-primary p-5 flex">
+    <div className=" bg-primary  flex">
       {/* <Aside /> */}
       <Layout />
     </div>

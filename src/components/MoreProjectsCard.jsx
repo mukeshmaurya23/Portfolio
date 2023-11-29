@@ -17,7 +17,7 @@ const MoreProjectsCard = () => {
                 <img
                   src={data?.image}
                   alt=""
-                  className="object-contain w-[2.8rem]  rounded-full"
+                  className="object-contain w-[2rem]  rounded-full"
                 />
                 <div className="px-2 py-1">
                   <h2 className="text-gray-400 font-semibold text-sm">

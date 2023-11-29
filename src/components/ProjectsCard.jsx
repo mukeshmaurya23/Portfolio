@@ -4,7 +4,7 @@ import MoreProjectsCard from "./MoreProjectsCard";
 
 const ProjectsCard = () => {
   return (
-    <div className="py-16 px-4">
+    <div className=" py-4 md:py-16 px-4">
       <h2 className="text-xl font-bold text-white mb-4" id="projects">
         Projects
       </h2>
@@ -36,7 +36,7 @@ const ProjectsCard = () => {
           );
         })}
         <div className="text-white bg-secondary mt-0 mb-0 lg:-mt-[5rem] lg:-mb-[5rem] rounded-md shadow-2xl ">
-          <h2 className="text-xl px-3 py-3 text-gray-400 font-semibold mb-4">
+          <h2 className="text-xl px-3 py-3 text-gray-400 font-semibold mb-0 md:mb-4">
             More Projects
           </h2>
           <MoreProjectsCard />

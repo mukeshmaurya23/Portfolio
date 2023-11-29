@@ -1,16 +1,18 @@
 import React from "react";
 import Modal from "./Modal";
+import { useToggle } from "../context/toggle";
 
 const Button = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const onCLickHandler = () => {
     setIsModalOpen(!isModalOpen);
   };
+  const { toggleMenuHandler } = useToggle();
 
   return (
     <>
       <nav
-        class={`flex bg-primary top-0 w-full sm:w-[calc(100%_-_15.625rem)] shadow-md fixed right-0 z-10 bg-inherit  p-5 text-info justify-between`}
+        class={`flex top-0 w-full z-10 bg-inherit  p-5 text-info justify-between`}
       >
         <div></div>
         <div class="flex items-center gap-5">
@@ -38,6 +40,7 @@ const Button = () => {
           </button>
           <button
             type="button"
+            onClick={toggleMenuHandler}
             className=" block text-white md:hidden hover:text-white"
           >
             <svg
@@ -60,8 +63,8 @@ const Button = () => {
         </div>
       </nav>
       <Modal isOpen={isModalOpen} onClose={onCLickHandler}>
-        <div className="flex flex-col gap-5">
-          <div className="flex gap-5">
+        <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col md:flex-row gap-5">
             <input
               type="text"
               placeholder="Name"

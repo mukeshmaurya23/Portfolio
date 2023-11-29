@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <div className="py-4 px-4">
       <h2 className="text-xl font-bold text-white mb-4">Experience</h2>
-      <div className="px-8 py-4">
+      <div className="px-2 md:px-8 py-4">
         <ol class="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400 cursor-pointer">
           {experienceData?.map((item) => {
             return (
@@ -36,10 +36,10 @@ const Experience = () => {
 
                 <ol className="list-inside list-disc">
                   {item.description.map((data) => (
-                    <li className="flex items-start  py-3">
+                    <li className="flex items-start  py-3 w-full">
                       {" "}
                       <span className="mr-2">•</span>
-                      <p className="text-sm">{data?.text}</p>
+                      <p className="text-sm w-full">{data?.text}</p>
                     </li>
                   ))}
                 </ol>

@@ -14,10 +14,39 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Mukesh Maurya</title>
+    <style>
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #008282;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="modal-root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration.scope);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

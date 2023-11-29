@@ -8,9 +8,9 @@ import Experience from "./Experience";
 const Main = () => {
   return (
     <>
-      <div className="ml-0 md:ml-[250px] w-full">
+      <div className="ml-0 md:ml-[290px] w-full  overflow-hidden">
         <Button />
-        <div className="mt-[8%]">
+        <div className="mt-[1%]">
           <ProfileBlockContainer />
           <ProjectsCard />
           <SkillsCard />
