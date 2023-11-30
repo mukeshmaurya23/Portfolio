@@ -5,15 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeContextProvider } from "./context/theme";
 import { ToggleContextProvider } from "./context/toggle";
-
+import { SnackbarProvider } from "notistack";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ToggleContextProvider>
-      <ThemeContextProvider>
-        <App />
-      </ThemeContextProvider>
-    </ToggleContextProvider>
+    <SnackbarProvider maxSnack={3}>
+      <ToggleContextProvider>
+        <ThemeContextProvider>
+          <App />
+        </ThemeContextProvider>
+      </ToggleContextProvider>
+    </SnackbarProvider>
   </React.StrictMode>
 );
 

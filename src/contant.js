@@ -368,3 +368,27 @@ export const experienceData = [
     ],
   },
 ];
+
+export const othersCategoryData = [
+  {
+    id: 1,
+    name: "Rest API",
+    image: require("../src/assets/images/restApi.jpg"),
+    code: "12,200",
+    timeStamp: "23 hours ago",
+  },
+  {
+    id: 2,
+    name: "Data Structure",
+    image: require("../src/assets/images/dataStructure.png"),
+    code: "1100",
+    timeStamp: "1 day ago",
+  },
+  {
+    id: 3,
+    name: "Graphql",
+    image: require("../src/assets/images/graphQl.png"),
+    code: "1023",
+    timeStamp: "7 hours ago",
+  },
+];

@@ -6,12 +6,11 @@ const SkillsCard = () => {
     return randomColorData(index);
   });
 
-  console.log(color, "color");
   return (
     <div className=" px-4">
       <h2 className="text-xl font-bold text-white mb-4">Technical Skills</h2>
-      <div className="flex flex-wrap justify-around gap-11">
-        <div className="mt-3 flex flex-col w-full md:w-1/5 bg-secondary">
+      <div className="flex flex-wrap justify-around gap-11 ">
+        <div className="mt-3 flex flex-col w-full md:w-1/5 bg-secondary rounded-xl">
           <h2 className="text-white text-md  mb-2 px-3 py-2">FrontEnd</h2>
           <div className="flex flex-wrap">
             {skillsData.frontEnd.map((item, index) => {
