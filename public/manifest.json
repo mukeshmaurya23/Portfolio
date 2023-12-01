@@ -3,9 +3,9 @@
   "name": "Mukesh Maurya",
   "icons": [
     {
-      "src": "./background.png",
+      "src": "./bgImage.png",
       "type": "image/png",
-      "sizes": "2048x2048",
+      "sizes": "1024x1024",
       "purpose": "any maskable"
     }
   ],
