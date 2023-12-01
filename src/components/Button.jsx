@@ -1,52 +1,31 @@
 import React, { useRef, useState } from "react";
 import Modal from "./Modal";
 import { useToggle } from "../context/toggle";
-import emailData from "../utility/Email";
+
 import { enqueueSnackbar } from "notistack";
 import emailjs from "@emailjs/browser";
-const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
 
 const Button = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
-  const [error, setError] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const onCLickHandler = () => {
     setIsModalOpen(!isModalOpen);
   };
   const form = useRef();
+
   const { toggleMenuHandler } = useToggle();
   const sendEmailHandler = (e) => {
     e.preventDefault();
-
-    // if (!emailRegex.test(contactData.email)) {
-    //   setError({
-    //     ...contactData,
-    //     email: "Please enter a valid email",
-    //   });
-    //   return;
-    // } else {
-    //   setError({
-    //     ...contactData,
-    //     email: "",
-    //   });
-    // }
-
-    // emailData(contactData);
     emailjs
       .sendForm(
-        `${process.env.REACT_APP_SERVICE_ID},${process.env.REACT_APP_TEMPLATE_ID}, ${form.current}, ${process.env.REACT_APP_PUBLIC_KEY}  `
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-        }
+        (response) => {},
+        (err) => {}
       );
     enqueueSnackbar("Email Sent Successfully", {
       variant: "success",
@@ -121,6 +100,7 @@ const Button = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  name="from_name"
                   className="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
                 />
               </div>
@@ -128,6 +108,7 @@ const Button = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  name="from_email"
                   className="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
                 />
               </div>
@@ -136,6 +117,7 @@ const Button = () => {
               <textarea
                 placeholder="Message"
                 rows={10}
+                name="message"
                 className="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
               ></textarea>
             </div>

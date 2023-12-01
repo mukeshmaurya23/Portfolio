@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./logo.png" />
+    <link rel="icon" href="./logoBg.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logoBg.jpg" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -40,10 +40,10 @@
           navigator.serviceWorker
             .register("/sw.js")
             .then((registration) => {
-              console.log("SW registered: ", registration.scope);
+              //console.log("SW registered: ", registration.scope);
             })
             .catch((registrationError) => {
-              console.log("SW registration failed: ", registrationError);
+              // console.log("SW registration failed: ", registrationError);
             });
         });
       }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { RxCross1 } from "react-icons/rx";
 const Modal = ({ isOpen, onClose, children }) => {
@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <>
       {isOpen &&
         createPortal(
-          <div className="fixed top-0 left-0 px-2 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="fixed top-0 left-0 px-2 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white w-full md:w-[500px] md:h-[500px] rounded-md">
               <div className="flex justify-end px-4 py-4">
                 <button onClick={onClose}>

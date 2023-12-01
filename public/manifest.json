@@ -1,9 +1,9 @@
 {
-  "short_name": "Portfolio App",
-  "name": "Portfolio App PWA",
+  "short_name": "Mukesh Maurya",
+  "name": "Mukesh Maurya",
   "icons": [
     {
-      "src": "./logo.png",
+      "src": "./background.png",
       "type": "image/png",
       "sizes": "1024x1024",
       "purpose": "any maskable"
