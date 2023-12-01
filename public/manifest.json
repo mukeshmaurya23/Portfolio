@@ -5,7 +5,7 @@
     {
       "src": "./background.png",
       "type": "image/png",
-      "sizes": "1024x1024",
+      "sizes": "2048x2048",
       "purpose": "any maskable"
     }
   ],
